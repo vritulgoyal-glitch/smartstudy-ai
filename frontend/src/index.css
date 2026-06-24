@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { font-family: 'Inter', system-ui, sans-serif; }
+  body { @apply bg-slate-950 text-slate-100 antialiased; }
+}
+
+@layer components {
+  .card {
+    @apply bg-slate-900/60 backdrop-blur-xl border border-slate-800 rounded-2xl shadow-xl;
+  }
+  .btn-primary {
+    @apply px-4 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white rounded-lg font-medium transition-all shadow-lg shadow-indigo-500/20 disabled:opacity-50;
+  }
+  .btn-secondary {
+    @apply px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-100 rounded-lg font-medium border border-slate-700 transition-all;
+  }
+  .btn-danger {
+    @apply px-3 py-1.5 bg-red-600/20 hover:bg-red-600/30 text-red-300 rounded-lg border border-red-600/30 text-sm transition-all;
+  }
+  .input {
+    @apply w-full px-4 py-2.5 bg-slate-800/60 border border-slate-700 rounded-lg text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all;
+  }
+  .label {
+    @apply block text-sm font-medium text-slate-300 mb-1.5;
+  }
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #0f172a; }
+::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #475569; }
+
+/* Gradient bg */
+.gradient-bg {
+  background: radial-gradient(ellipse at top, rgba(99, 102, 241, 0.15), transparent 50%),
+              radial-gradient(ellipse at bottom right, rgba(168, 85, 247, 0.1), transparent 50%),
+              #020617;
+}
