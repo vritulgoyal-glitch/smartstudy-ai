@@ -40,7 +40,16 @@ export default function Planner() {
   }
 
   const data = plan?.plan_data || plan
-  console.log("PLAN DATA FULL:", JSON.stringify(data, null, 2))
+
+console.log("PLAN RAW =", plan)
+console.log("PLAN DATA =", data)
+
+if (data) {
+  console.log("SUMMARY =", data.summary)
+  console.log("SCHEDULE =", data.schedule)
+  console.log("TIMELINE =", data.completion_timeline)
+  console.log("TIPS =", data.tips)
+}
 
   return (
     <div className="max-w-7xl mx-auto space-y-6 animate-fade-in">
